@@ -17,14 +17,12 @@ export class Projects {
 
   openProjectId: string | null = null;
 
-  // Función para cerrar todo explícitamente
+  // Función para cerrar todo el acordeon
   closeAll() {
     this.openProjectId = null;
   }
 
   toggleProject(id: string) {
-    // Si el clic es sobre el mismo que ya está abierto, se cierra.
-    // Si no, abre el nuevo.
     if (this.openProjectId === id) {
       this.closeAll();
     } else {
