@@ -1,0 +1,182 @@
+/*ESTILOSO BOTON MODO OCURO*/
+:root {
+  /* Colores base (Modo Claro) */
+  --bg-color: #f2f2f2;
+  --text-color: #333;
+  --header-bg: #1e90ff;
+  --section-bg: #ffffff;
+  --footer-bg: #eee;
+  --accent-color: #1e90ff;
+  --accent-hover: #1565c0;
+}
+
+body.dark {
+  --bg-color: #212121;
+  --text-color: #D3D3D4;
+  --header-bg: #27272E;
+  --section-bg: #27272E;
+  --footer-bg: #27272E;
+  --accent-color: #5956E9;
+  --accent-hover: #2522BA;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  background-color: var(--header-bg);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+}
+
+section {
+  background-color: var(--section-bg);
+  color: var(--text-color);
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+h3 { color: var(--accent-color); }
+
+a, .cv-button { color: var(--accent-color); }
+
+.cv-button {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 15px;
+  text-decoration: none;
+}
+
+.cv-button:hover { background-color: var(--accent-hover); }
+
+section:nth-of-type(even) {
+  animation-delay: 0.3s;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.cv-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: lightblue;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  border-radius: 15px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+
+section:hover {
+  transform: translateY(-15px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+section h3{
+   transition: all 300ms ease-in-out;
+}
+
+
+section h3:hover{
+  color:blue
+}
+
+.switcher{
+  position: fixed;
+  top: 20rem;
+  left: 0;
+  background-color: #1e90ff;
+  border-radius: 0 3rem 3rem 0;
+  padding: 1rem;
+  z-index: 5;
+}
+
+.switcher__btn{
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+
+.switcher__icon-light,
+.switcher__icon-dark{
+  color: white;
+  font-size: 1.8rem;
+  height: 2rem;
+  width: 2rem;
+  line-height: 2rem;
+}
+
+.switcher__icon-dark{
+  display: none;
+}
+
+/*LOGO*/
+
+/* Por defecto: modo claro */
+.logo-dark {
+  display: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
+}
+
+
+@media (max-width:850px){
+  body{
+    width: 80%;
+    max-width: 74rem;
+    margin: 0 auto;
+  }
+
+  header {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    text-align: center;
+    padding: 20px 0;
+  }
+}

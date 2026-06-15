@@ -1,0 +1,17 @@
+<header>
+  <h1>Calixto Bocamba Belica</h1>
+  <p class="subtitle">Desarrollador Web Junior | Angular & TypeScript</p>
+  
+  <div class="header-actions">
+    <button (click)="scrollTo('projects')" class="btn-primary">Ver mis proyectos</button>
+    <button (click)="scrollTo('contact')"  class="btn-secondary">Contáctame</button>
+  </div>
+</header>
+
+  <div class="switcher">
+  <button class="switcher__btn" (click)="toggleDarkMode()">
+    <span class="switcher__icon">
+      {{ isDarkMode ? '☀️' : '🌙' }}
+    </span>
+  </button>
+</div>

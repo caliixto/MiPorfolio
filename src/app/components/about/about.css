@@ -1,0 +1,12 @@
+.fade-in {
+  animation: fadeIn 1.5s ease-out forwards;
+}
+
+.about-content {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+strong {
+  color: var(--accent-color);
+}
