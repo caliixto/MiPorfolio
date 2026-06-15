@@ -4,6 +4,7 @@
   --bg-color: #f2f2f2;
   --text-color: #333;
   --header-bg: #1e90ff;
+  --button-hover:#333;
   --section-bg: #ffffff;
   --footer-bg: #eee;
   --accent-color: #1e90ff;
@@ -13,7 +14,8 @@
 body.dark {
   --bg-color: #212121;
   --text-color: #D3D3D4;
-  --header-bg: #27272E;
+  --header-bg: #5956E9;
+  --button-hover:#5956E9;
   --section-bg: #27272E;
   --footer-bg: #27272E;
   --accent-color: #5956E9;
@@ -29,7 +31,7 @@ body {
 }
 
 header {
-  background-color: var(--header-bg);
+  background-color: var(--accent-color);
   color: white;
   padding: 2rem;
   text-align: center;
@@ -65,6 +67,15 @@ section:nth-of-type(even) {
 
 .fade-in {
   animation: fadeIn 1.5s ease-out forwards;
+}
+
+.skills-card{
+  background-color: var(--bg-color);
+  color: black;
+}
+
+.skills-grid{
+  background-color: var(--section-bg);
 }
 
 
@@ -146,6 +157,13 @@ section h3:hover{
 
 .switcher__icon-dark{
   display: none;
+}
+
+/* Efecto hover y estado activo */
+.filter-buttons button:hover, 
+.filter-buttons button.active {
+  background-color: var(--button-hover);
+  color: #fff;
 }
 
 /*LOGO*/

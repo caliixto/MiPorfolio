@@ -4,13 +4,21 @@
   </section>
 
   <section class="habilidades fade-in">
-    <h3>Habilidades</h3>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Angular (nivel básico)</li>
-      <li>PHP</li>
-      <li>SQL</li>
-    </ul>
-  </section>
+  <h3>Mis Habilidades</h3>
+
+  <div class="filter-buttons">
+    <button (click)="filter('todas')" [class.active]="currentFilter==='todas'">Todas</button>
+    <button (click)="filter('lenguaje')" [class.active]="currentFilter==='lenguaje'">Lenguajes</button>
+    <button (click)="filter('framework')" [class.active]="currentFilter==='framework'">Frameworks</button>
+    <button (click)="filter('herramienta')" [class.active]="currentFilter==='herramienta'">Herramientas</button>
+  </div>
+
+  <div class="skills-grid">
+    @for (sk of displaySkills; track sk.name) {
+      <div class="skill-card">
+        <img [src]="sk.image" [alt]="sk.name">
+        <p>{{sk.name}}</p>
+      </div>
+    }
+  </div>
+</section>
