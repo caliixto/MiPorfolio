@@ -1,0 +1,106 @@
+.proyectos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  gap: 20px;
+  padding: 10px;
+}
+
+.proyecto-card {
+  background-color: var(--section-bg);
+  border-radius: 12px;
+  position: relative;
+  padding: 20px;
+  height: max-content; 
+  display: flex;
+  z-index: 1;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  transition: all 0.3s ease, z-index 0s;/* <--- Ahora la tarjeta solo ocupa lo que necesita */
+}
+
+.proyecto-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.card-body {
+  background: var(--section-bg);
+  padding: 0 15px; /* Quitamos padding vertical inicial */
+  border-left: 1px solid rgba(128, 128, 128, 0.2);
+  border-right: 1px solid rgba(128, 128, 128, 0.2);
+  border-bottom: 0 solid rgba(128, 128, 128, 0.2);
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.proyecto-card:hover .card-body {
+  max-height: 200px;
+  opacity: 1;
+  padding: 15px; /* El padding aparece aquí al abrirse */
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+.card-links {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.card-links a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 20px; /* Estilo píldora */
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid var(--accent-color);
+}
+
+/* Estilo para el botón de 'Ver demo' (relleno) */
+.card-links a:first-child {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+/* Estilo para el botón de 'Ver código' (borde) */
+.card-links a:last-child {
+  background-color: transparent;
+  color: var(--accent-color);
+}
+
+/* Efecto Hover */
+.card-links a:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+/* Añade esto a tu CSS */
+.card-header::after {
+  content: '▼';
+  font-size: 0.8rem;
+  margin-left: auto;
+  opacity: 0.5;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover .card-header::after {
+  transform: rotate(180deg);
+}
