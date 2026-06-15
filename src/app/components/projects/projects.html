@@ -3,15 +3,15 @@
   
   <div class="proyectos-grid">
     @for (p of project; track p.titulo) {
-      <div class="proyecto-card">
+      <div class="proyecto-card" (click)="toggleProject(p.titulo)">
         <div class="card-header">
           <img [src]="p.imagen" [alt]="p.titulo">
           <h4>{{ p.titulo }}</h4>
         </div>
 
-        <div class="card-body">
+        <div class="card-body" [class.is-open]="openProjectId === p.titulo">
           <p>{{ p.descripcion }}</p>
-          <div class="card-links">
+          <div class="card-links" (click)="$event.stopPropagation()">
             <a [href]="p.demo" target="_blank">Ver demo</a>
             <a [href]="p.codigo" target="_blank">Ver código</a>
           </div>
@@ -20,4 +20,3 @@
     }
   </div>
 </section>
-  

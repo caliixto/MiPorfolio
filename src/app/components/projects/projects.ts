@@ -9,6 +9,29 @@ import { Proyecto } from './project.model';
 })
 export class Projects {
 
+  isMobile: boolean = false;
+
+  ngOnInit() {
+    this.isMobile = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+  }
+
+  openProjectId: string | null = null;
+
+  // Función para cerrar todo explícitamente
+  closeAll() {
+    this.openProjectId = null;
+  }
+
+  toggleProject(id: string) {
+    // Si el clic es sobre el mismo que ya está abierto, se cierra.
+    // Si no, abre el nuevo.
+    if (this.openProjectId === id) {
+      this.closeAll();
+    } else {
+      this.openProjectId = id;
+    }
+  }
+
   project:Proyecto[]=[
     { titulo: 'Buscador de GIFs', 
       descripcion: "Aplicación web que permite buscar y mostrar GIFs animados usando la API de Giphy.",

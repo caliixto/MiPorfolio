@@ -59,3 +59,13 @@
   background-color: var(--button-hover);
   color: #fff;
 }
+
+@media (max-width:370px){
+  .filter-buttons{
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+  .filter-buttons button{
+    width: 80%;
+  }
+}

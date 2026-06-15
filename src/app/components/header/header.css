@@ -84,3 +84,18 @@ header {
 .switcher__icon {
   transition: all 0.3s ease;
 }
+
+@media (max-width:370px){
+ header {
+  padding: 1rem 0rem;
+  gap: 1rem;
+}
+
+header h1{
+  margin-bottom: 0;
+}
+
+.header-actions{
+  margin-top: 0;
+}
+}
