@@ -1,4 +1,4 @@
-/* 1. Grid estable */
+
 .proyectos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -127,4 +127,17 @@
     max-width: 350px;
     margin: 0;
   }
+}
+
+.featured-card {
+  width: 100%;
+  margin-bottom: 30px; /* Separación extra del resto */
+  border: 2px solid var(--accent-color);
+  background: linear-gradient(135deg, var(--section-bg), rgba(var(--accent-rgb), 0.05));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02); /* Un poco más grande para que resalte */
+}
+
+.featured-card:hover {
+  transform: scale(1.03); /* Efecto más potente al pasar el ratón */
 }
