@@ -129,15 +129,15 @@
   }
 }
 
-.featured-card {
-  width: 100%;
-  margin-bottom: 30px; /* Separación extra del resto */
+/* El estilo de la tarjeta destacada */
+.proyecto-card.featured {
+  grid-column: 1 / -1; /* Esto le dice: "ocupa desde la primera hasta la última columna" */
   border: 2px solid var(--accent-color);
-  background: linear-gradient(135deg, var(--section-bg), rgba(var(--accent-rgb), 0.05));
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform: scale(1.02); /* Un poco más grande para que resalte */
+  background: rgba(var(--accent-rgb), 0.05); /* Un tono muy suave de tu color */
 }
 
-.featured-card:hover {
-  transform: scale(1.03); /* Efecto más potente al pasar el ratón */
+/* Para que la imagen en la tarjeta destacada se vea mejor */
+.featured .card-header img {
+  width: 70px; /* Un poco más grande que las demás */
+  height: 70px;
 }
