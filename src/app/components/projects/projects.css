@@ -1,4 +1,4 @@
-/* 1. Grid estable */
+
 .proyectos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -17,7 +17,6 @@
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  /* IMPORTANTE: Esto evita que la tarjeta sobresalga */
   box-sizing: border-box; 
   width: 100%;
 }
@@ -35,8 +34,9 @@
 }
 
 .card-header img {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
   border-radius: 8px;
 }
 
@@ -46,12 +46,11 @@
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s ease;
-  /* Padding interno en lugar de bordes que sumen ancho */
   padding: 0;
 }
 
 .card-body.is-open {
-  max-height: 300px; /* Ajusta según tu contenido */
+  max-height: 300px;
   opacity: 1;
   margin-top: 15px;
   border-top: 1px solid rgba(128, 128, 128, 0.2);
@@ -127,4 +126,45 @@
     max-width: 350px;
     margin: 0;
   }
+
+  .proyecto-card.featured .card-header{
+    gap: 10px;
+  }
+  .proyecto-card.featured .card-header img{
+    width: 60px;
+    height: 60px;
+  }
+  .card-header h4{
+    margin: 0;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-header::after{
+    margin-left: 0;
+    flex-shrink: 0;
+  }
+
+}
+
+@media(max-width:600px) {
+  .proyecto-card.featured .card-body.is-open {
+    max-height: 500px;
+  }
+
+}
+
+
+
+
+.proyecto-card.featured {
+  grid-column: 1 / -1;
+  border: 2px solid var(--accent-color);
+  background: rgba(var(--accent-rgb), 0.05);
+}
+
+/* Para que la imagen en la tarjeta destacada se vea mejor */
+.featured .card-header img {
+  width: 80px; 
+  height: 80px;
 }

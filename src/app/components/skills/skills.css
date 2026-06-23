@@ -1,3 +1,46 @@
+/*Formacion*/
+.formacion-card {
+  background: var(--section-bg);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  transition: transform 0.3s ease;
+  margin-top: 1rem;
+}
+
+.formacion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.formacion-header h4 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.badge {
+  background: var(--accent-color);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.institucion {
+  font-weight: 600;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.detalle {
+  margin-top: 10px;
+  color: #666;
+}
+
+/* Skills */
 .skills-grid {
   display: grid;
   /* Esto crea columnas automáticas que se ajustan al espacio */
@@ -68,4 +111,42 @@
   .filter-buttons button{
     width: 80%;
   }
+
+
+  
+
+ .formacion-card:nth-of-type(2) .badge {
+  font-size: 0.6rem;
+  padding-left: 0.4rem;
+  padding-right: 0;
+  }
+  
+  .badge{
+    width: 100%;
+    font-size: 0.7rem;
+    align-content: center;
+    align-items: center;
+    margin: 0;
+  }
 }
+
+@media (max-width:600px){
+  .filter-buttons{
+    flex-direction: column;
+    margin-left: 2rem;
+  }
+  .filter-buttons button{
+    width: 80%;
+  }
+  .formacion-header h4{
+    font-size: 1rem;
+  }
+  .badge{
+    padding: 0.25rem 0.75rem;
+    width: 80%;
+    height: 30px;
+    align-content: center;
+    align-items: center;
+  }
+}
+

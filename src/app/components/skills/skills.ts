@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { Skill } from './skill.model';
-import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-skills',
-  imports: [NgFor],
+  imports: [],
   templateUrl: './skills.html',
   styleUrl: './skills.css',
 })

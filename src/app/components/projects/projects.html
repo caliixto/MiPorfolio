@@ -1,12 +1,15 @@
-<section class="proyectos">
+<section class="proyectos" id="projects">
   <h3>Mis Proyectos</h3>
   
   <div class="proyectos-grid">
     @for (p of project; track p.titulo) {
-      <div class="proyecto-card" (click)="toggleProject(p.titulo)">
+      <div class="proyecto-card" 
+           [class.featured]="p.titulo === 'LandingPage'" 
+           (click)="toggleProject(p.titulo)">
+        
         <div class="card-header">
           <img [src]="p.imagen" [alt]="p.titulo">
-          <h4>{{ p.titulo }}</h4>
+          <h4>{{ p.titulo }} {{ p.titulo === 'LandingPage' ? '(Destacado)' : '' }}</h4>
         </div>
 
         <div class="card-body" [class.is-open]="openProjectId === p.titulo">
