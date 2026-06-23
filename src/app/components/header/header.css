@@ -132,7 +132,20 @@ header p{
   width: 90%;
 }
 
+header h1{
+  margin-top: 2rem;
+}
+
 .header-actions{
   margin-top: 0;
+}
+
+
+
+.btn-back{
+  top: 5px;
+  left: 5px;
+  padding:5px 5px;
+  font-size: 0.9rem;
 }
 }
