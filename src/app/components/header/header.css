@@ -110,6 +110,10 @@ header p{
   width: 90%;
 }
 
+header h1{
+  margin-top: 2rem;
+}
+
 .header-actions{
   margin-top: 0;
 }

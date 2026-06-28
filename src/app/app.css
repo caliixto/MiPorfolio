@@ -1,0 +1,34 @@
+/*Volver al inicio*/
+
+footer{
+   position: absolute; 
+}
+
+.btn-back {
+  position: relative;
+  bottom:5px;
+  left: 20px;
+  z-index: 1000;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  text-decoration: none;
+  color: var(--color-title);
+  font-size: 1.3rem;
+  transition: all 300ms ease;
+}
+
+.btn-back:hover {
+  background-color: var(--text-color);
+  color: white;
+}
+
+
+@media (max-width:600px){
+  .btn-back{
+    bottom:5px;
+    left: 0;
+    padding:5px 5px;
+    font-size: 0.9rem;
+  }
+}
