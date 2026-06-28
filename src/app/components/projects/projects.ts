@@ -36,7 +36,7 @@ export class Projects {
       imagen: '/img/landing.png', demo: 'https://landing-page-pearl-mu-33.vercel.app/', codigo:"https://github.com/caliixto/LandingPage.git", abierto: false},
     {titulo: 'Buscador de GIFs', 
       descripcion: "Aplicación frontend que consume la API de Giphy para buscar y mostrar GIFs en tiempo real. Implementa peticiones HTTP asíncronas y renderizado dinámico de resultados en Angular.",
-      imagen: '/img/gifApp.png', demo: 'https://caliixto.github.io/angular-bases/', codigo:"https://github.com/caliixto/angular-bases", abierto: false},
+      imagen: '/img/gifApp.png', demo: 'https://gifs-app-peach.vercel.app/', codigo:"https://github.com/caliixto/GifsApp.git", abierto: false},
     {titulo: 'GamesPage', descripcion: "Página web de noticias de videojuegos con diseño responsive. Implementa maquetación moderna y estructura optimizada para visualización en distintos dispositivos.",
       imagen: '/img/gamePage.png', demo: 'https://caliixto.github.io/GamesPage', codigo:"https://github.com/caliixto/GamesPage.git", abierto: false },
     {titulo: 'Plantilla Porfolio',
